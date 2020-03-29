@@ -1,24 +1,22 @@
 .bk-root {
-  @noUi-css-prefix: bk-noUi;
-  @nouislider: "../../../node_modules/nouislider/src";
-  @import "@{nouislider}/nouislider.base.less";
+  @import (less) "../../../node_modules/nouislider/distribute/nouislider.css";
 
-  .@{noUi-css-prefix}-handle {
+  .noUi-handle {
     cursor: grab;
     cursor: -webkit-grab;
-    &.@{noUi-css-prefix}-active {
+    &.noUi-active {
       cursor: grabbing;
       cursor: -webkit-grabbing;
     }
   }
 
-  .@{noUi-css-prefix}-tooltip {
+  .noUi-tooltip {
     display: none;
     white-space: nowrap;
   }
 
-  .@{noUi-css-prefix}-handle:hover {
-    .@{noUi-css-prefix}-tooltip {
+  .noUi-handle:hover {
+    .noUi-tooltip {
       display: block;
     }
   }
@@ -32,42 +30,42 @@
 
   @slider-margin: (@handle-height - @slider-size)/2 + 1;
 
-  .@{noUi-css-prefix}-horizontal {
+  .noUi-horizontal {
     width: 100%;
     height: @slider-size;
 
-    &.@{noUi-css-prefix}-target {
+    &.noUi-target {
       margin: @slider-margin 0px;
     }
   }
-  .@{noUi-css-prefix}-horizontal .@{noUi-css-prefix}-handle {
+  .noUi-horizontal .noUi-handle {
     width: @handle-width;
     height: @handle-height;
     left: @handle-left;
     top: @handle-top;
   }
-  .@{noUi-css-prefix}-vertical {
+  .noUi-vertical {
     width: @slider-size;
     height: 100%;
 
-    &.@{noUi-css-prefix}-target {
+    &.noUi-target {
       margin: 0px @slider-margin;
     }
   }
-  .@{noUi-css-prefix}-vertical .@{noUi-css-prefix}-handle {
+  .noUi-vertical .noUi-handle {
     width: @handle-height;
     height: @handle-width;
     left: @handle-top;
     top: @handle-left;
   }
 
-  .@{noUi-css-prefix}-handle {
+  .noUi-handle {
     &:after, &:before {
       display: none;
     }
   }
 
-  .@{noUi-css-prefix}-connect {
+  .noUi-connect {
     box-shadow: none;
   }
 }
