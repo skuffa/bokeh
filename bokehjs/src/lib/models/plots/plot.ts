@@ -257,4 +257,6 @@ export class Plot extends LayoutDOM {
     const {above, below, left, right} = this
     return concat([above, below, left, right])
   }
+
+  level = null
 }
